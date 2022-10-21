@@ -1,0 +1,6 @@
+setup.py
+vowelsearch.py
+vowelsearch.egg-info/PKG-INFO
+vowelsearch.egg-info/SOURCES.txt
+vowelsearch.egg-info/dependency_links.txt
+vowelsearch.egg-info/top_level.txt
