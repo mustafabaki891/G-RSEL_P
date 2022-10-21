@@ -20,7 +20,7 @@ class QLabelDemo(QWidget):
         label1.setAutoFillBackground(True)
 
         palette = QPalette()
-        palette.setColor(QPalette.ColorRole, Qt.blue)
+        palette.setColor(QPalette.Window, Qt.blue)
         
         label1.setPalette(palette)
 
@@ -50,14 +50,14 @@ class QLabelDemo(QWidget):
         label2.linkHovered.connect(self.linkHovered)
         label2.linkHovered.connect(self.linkHovered)
         label1.linkHovered.connect(self.linkHovered)
-        label4.linkActivated.connect(self.linkClicked)
+        label4.linkActivated.connect(self.linkActivated)
 
         self.setLayout(vbox)
 
     def linkHovered(self):
         print("Link Hovered")
 
-    def linkHovered(self):
+    def linkActivated(self):
         print("Link clicked")
 
 if __name__ == "__main__":
