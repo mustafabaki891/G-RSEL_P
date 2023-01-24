@@ -23,8 +23,6 @@ class MyWindow(QWidget):
         sender = self.sender()
         print(sender.text())
 
-
-
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     win = MyWindow()

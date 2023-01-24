@@ -27,21 +27,23 @@ class MyWindow(QWidget):
         self.btnPress2.clicked.connect(self.btnPress2_Clicked)
         self.btnPress3.clicked.connect(self.btnPress3_Clicked)
 
-        self.setLayout(layout)
 
+        self.setLayout(layout)
+    
     def btnPress1_Clicked(self):
         self.textEdit.setPlainText("Hello\nHello world");
 
     def btnPress2_Clicked(self):
-        self.textEdit.setPlainText("<p><strong>Hello</strong> world </p>")
+        self.textEdit.setHtml("<p><strong style='color:red;'>Hello</strong> world</p>")
 
     def btnPress3_Clicked(self):
         self.textEdit.clear()
-    
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     win = MyWindow()
     win.show()
     sys.exit(app.exec_())
+
 

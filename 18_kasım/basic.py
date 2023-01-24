@@ -11,14 +11,6 @@ class MyWindow(QWidget):
     def initUI(self):
         pass
 
-    def closeEvent(self,event):
-        reply = QMessageBox.question(self, "Quit", "Are you sure?", QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
-
-        if reply == QMessageBox.Yes:
-            print("Kapanıyorum")
-            event.accept()
-        else:
-            event.ignore()
 
 
 if __name__ == "__main__":
@@ -26,3 +18,5 @@ if __name__ == "__main__":
     win = MyWindow()
     win.show()
     sys.exit(app.exec_())
+
+

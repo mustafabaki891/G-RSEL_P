@@ -11,18 +11,15 @@ class MyWindow(QWidget):
     def initUI(self):
         pass
 
-    def closeEvent(self,event):
-        reply = QMessageBox.question(self, "Quit", "Are you sure?", QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
 
-        if reply == QMessageBox.Yes:
-            print("Kapanıyorum")
-            event.accept()
-        else:
-            event.ignore()
-
+    def keyPressEvent(self, e):
+        if e.key() == Qt.Key_Escape:
+            self.close()
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     win = MyWindow()
     win.show()
     sys.exit(app.exec_())
+
+

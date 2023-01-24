@@ -12,7 +12,7 @@ class MyWindow(QWidget):
         lcd = QLCDNumber(self)
         sld = QSlider(Qt.Horizontal, self)
 
-        layout =  QVBoxLayout()
+        layout = QVBoxLayout()
         layout.addWidget(lcd)
         layout.addWidget(sld)
         self.setLayout(layout)
